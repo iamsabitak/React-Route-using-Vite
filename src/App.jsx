@@ -1,40 +1,14 @@
-import Navbar from "./Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
-import Login from "./LogInLogoOut";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppContent from "./AppContent";
+// import CounterRedux from "./CounterRedux";
 
 function App() {
   return (
     <Router>
+      {" "}
       <AppContent />
+      {/* <CounterRedux /> */}
     </Router>
   );
 }
-
-function AppContent() {
-  const location = useLocation();
-  const isLoginPage = location.pathname === "/";
-
-  return (
-    <>
-      {!isLoginPage && <Navbar />}
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/" element={<Login />} />
-      </Routes>
-    </>
-  );
-}
-
 export default App;
