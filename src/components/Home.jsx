@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div className="container-fluid py-5 home-background">
+    <div className="container-fluid py-1 home-background">
       <div className="container">
         <div className="row">
           <div className="col-md-6 d-flex align-items-center">
