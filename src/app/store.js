@@ -9,7 +9,7 @@ const store = configureStore({
     counter: counterReducer,
     todo: todoReducer,
     userDetails: userDetailReducer,
-    userData: dataSlice,
+    data: dataSlice,
   },
 });
 
