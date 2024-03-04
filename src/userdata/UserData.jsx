@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../features/dataSlice";
 
@@ -5,9 +6,10 @@ function UserData() {
   const user = useSelector((state) => state.data);
   const dispatch = useDispatch();
 
-  const handleFetchData = () => {
+  useEffect(() => {
     dispatch(fetchData());
-  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="container mt-5">
@@ -18,9 +20,6 @@ function UserData() {
       ) : user.error ? (
         <div className="text-center">
           <p>Error: {user.error}</p>
-          <button className="btn btn-primary" onClick={handleFetchData}>
-            Retry
-          </button>
         </div>
       ) : (
         <>
@@ -40,11 +39,6 @@ function UserData() {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="text-center mt-3">
-            <button className="btn btn-primary" onClick={handleFetchData}>
-              Fetch User
-            </button>
           </div>
         </>
       )}
