@@ -32,19 +32,6 @@ function Navbar() {
           </ul>
 
           <Link to="/" />
-
-          {/* <div className="grid gap-5">
-            <button className="btn btn-outline-success">Login</button>
-            <button
-              className="btn btn-outline-success"
-              onClick={() => {
-                localStorage.removeItem("token");
-                // Navigate("/");
-              }}
-            >
-              Logout
-            </button>
-          </div> */}
         </div>
       </div>
     </nav>
