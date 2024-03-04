@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { removeTodo } from "../features/todoSlice";
 
-function Todos() {
-  const todos = useSelector((state) => state.todo.todos);
+const Todos = () => {
+  const todos = useSelector((state) => state.todo);
   const dispatch = useDispatch();
 
   return (
@@ -26,6 +26,6 @@ function Todos() {
       </ul>
     </div>
   );
-}
+};
 
 export default Todos;
