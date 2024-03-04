@@ -33,4 +33,4 @@ const dataSlice = createSlice({
   },
 });
 
-export default dataSlice.extraReducers;
+export default dataSlice.reducer;
